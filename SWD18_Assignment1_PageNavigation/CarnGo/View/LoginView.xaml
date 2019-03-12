@@ -23,8 +23,12 @@
                      FontSize="{StaticResource FontSizeLarge}"/>
             <PasswordBox Tag="Password"
                          FontSize="{StaticResource FontSizeLarge}"/>
+            
+            
             <Button Content="Login"
                     FontSize="{StaticResource FontSizeLarge}"/>
+            
+            
             <Button Style="{StaticResource TextButton}"
                     Content="Or register here..."
                     Foreground="{StaticResource ForegroundMainBrush}"/>

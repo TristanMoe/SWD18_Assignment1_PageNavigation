@@ -9,13 +9,13 @@ namespace CarnGo.Model
     public class UserProfileModel
     {
         #region Constructors
-        UserProfileModel()
+        public UserProfileModel()
         {
             UserName = "";
             Password = ""; 
         }
 
-        UserProfileModel(string username, string password)
+        public UserProfileModel(string username, string password)
         {
             UserName = username;
             Password = password; 
