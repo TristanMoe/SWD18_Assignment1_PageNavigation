@@ -1,0 +1,38 @@
+﻿<Window x:Class="CarnGo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarnGo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="800">
+    <ScrollViewer CanContentScroll="True">
+        <StackPanel MinHeight="50">
+            <Border Background="{StaticResource BlueMainBrush}">
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Style="{StaticResource HeaderText}" 
+                               Text="Headertext"/>
+                    <Button Style="{StaticResource TextButton}" 
+                            Content=" I am a text button"/>
+                    <Button Style="{StaticResource TextButton}" 
+                            Content=" I am a disabled text button"
+                            IsEnabled="False"/>
+                    <Button Style="{StaticResource TextButton}" 
+                            Content="{StaticResource FontAwesomeUserIcon}"
+                            FontFamily="{StaticResource FontAwesome}"/>
+                    <Button Style="{StaticResource IconGrowButton}" 
+                            Content="{StaticResource FontAwesomeCogIcon}"/>
+                </StackPanel>
+            </Border>
+            <TextBlock Text="This is a regular textblock, with a lot of regular text. The basestyle of this is overriden, so no style has to be specified"/>
+            <TextBox Tag="I am a regular textbox try writing"/>
+            <TextBox Text="I am a disabled textbox"
+                     IsEnabled="False"/>
+            <PasswordBox Tag="Password box, you can set the start text via tag"/>
+            <Button Content=" I am a regular button"/>
+            <Button Content=" I am a disabled button"
+                    IsEnabled="False"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

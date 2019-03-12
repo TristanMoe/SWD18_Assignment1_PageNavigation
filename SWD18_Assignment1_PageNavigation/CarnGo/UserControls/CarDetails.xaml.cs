@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SWD18_Assignment1_PageNavigation
+namespace CarnGo.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CarDetails.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CarDetails : UserControl
     {
-        public MainWindow()
+        public CarDetails()
         {
             InitializeComponent();
         }

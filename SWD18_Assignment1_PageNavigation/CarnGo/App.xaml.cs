@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace SWD18_Assignment1_PageNavigation
+namespace CarnGo
 {
     /// <summary>
     /// Interaction logic for App.xaml

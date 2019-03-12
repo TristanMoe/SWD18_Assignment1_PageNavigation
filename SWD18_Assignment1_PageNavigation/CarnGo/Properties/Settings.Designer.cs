@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SWD18_Assignment1_PageNavigation.Properties
+namespace CarnGo.Properties
 {
 
 
