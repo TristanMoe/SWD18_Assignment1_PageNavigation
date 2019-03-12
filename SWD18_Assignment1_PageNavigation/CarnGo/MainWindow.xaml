@@ -6,6 +6,15 @@
         xmlns:local="clr-namespace:CarnGo"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="800">
+
+    <Grid>
+        
+    </Grid>
+        
+    
+    
+    
+    <!--
     <ScrollViewer CanContentScroll="True">
         <StackPanel MinHeight="50">
             <Border Background="{StaticResource BlueMainBrush}">
@@ -35,4 +44,5 @@
                     IsEnabled="False"/>
         </StackPanel>
     </ScrollViewer>
+    -->
 </Window>

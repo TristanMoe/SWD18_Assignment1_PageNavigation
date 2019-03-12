@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CarnGo.ViewModel
 {
-    public class LoginViewModel
+    public class LoginViewModel : BaseViewModel
     {
         #region Constructors
         public LoginViewModel()
@@ -23,16 +23,6 @@ namespace CarnGo.ViewModel
                 new UserProfileModel("Martin Gildberg", "1234")
             };        
         }    
-        #endregion
-
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
         #endregion
 
         #region Properties
