@@ -57,12 +57,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\UserProfileModel.cs" />
     <Compile Include="UserControls\CarDetails.xaml.cs">
       <DependentUpon>CarDetails.XAML</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CarEquipment.xaml.cs">
       <DependentUpon>CarEquipment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -161,10 +163,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Bilfoto.jpg" />
   </ItemGroup>
