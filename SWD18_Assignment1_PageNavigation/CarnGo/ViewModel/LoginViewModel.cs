@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Commands;
 
 namespace CarnGo.ViewModel
 {
@@ -39,6 +40,14 @@ namespace CarnGo.ViewModel
         #endregion
 
         #region Commands
+        public DelegateCommand<string> LoginCommand;
+        #endregion
+
+        #region CanExecute & Execute
+        private void LoginExecute()
+        {
+            //Set CurrentPage to StartPage
+        }
         #endregion
 
     }
