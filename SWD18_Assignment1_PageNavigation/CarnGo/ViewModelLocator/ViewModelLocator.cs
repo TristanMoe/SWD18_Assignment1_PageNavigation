@@ -21,7 +21,7 @@ namespace CarnGo.ViewModelLocator
         /// <summary>
         /// Singleton instance of ViewModelLocator
         /// </summary>
-        //public static ViewModelLocator ApplicationViewModel { get; set; } = new ApplicationViewModel(); 
+        public static CarnGo.ViewModel.ApplicationViewModel ApplicationViewModel { get; set; } = new CarnGo.ViewModel.ApplicationViewModel(); 
         #endregion
 
 

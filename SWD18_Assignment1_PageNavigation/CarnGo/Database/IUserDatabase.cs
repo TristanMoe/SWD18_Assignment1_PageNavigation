@@ -19,7 +19,7 @@ namespace CarnGo.Database
 
     }
 
-    public class UserDatabaseStub
+    public class UserDatabaseStub : IUserDatabase
     {
         /// <summary>
         /// Creates a new UserModel with the given parameters 

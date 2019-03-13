@@ -4,11 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarnGo"
+        xmlns:CarnGo.View="clr-namespace:CarnGo.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="800">
-
-    <Grid>
+        Title="MainWindow" Height="500" Width="400">
+    
+    <Window.Resources>
+        <CarnGo.View:LoginView x:Key="LoginView"/>
+    </Window.Resources>
         
+        
+    <Grid>
+        <Frame Content="{StaticResource LoginView}"></Frame>
     </Grid>
         
     
