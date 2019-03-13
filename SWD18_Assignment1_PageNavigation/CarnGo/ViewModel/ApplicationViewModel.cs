@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CarnGo.Model;
 
 namespace CarnGo.ViewModel
 {
@@ -33,12 +34,6 @@ namespace CarnGo.ViewModel
             CurrentPage = page;
 
         }
-    }
-
-    public enum ApplicationPage
-    {
-        LoginPage,
-        DummyPage
     }
 }
 

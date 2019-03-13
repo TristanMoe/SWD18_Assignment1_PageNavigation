@@ -74,6 +74,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\IUserDatabase.cs" />
+    <Compile Include="Model\ApplicationPage.cs" />
     <Compile Include="Model\UserModel.cs" />
     <Compile Include="UserControls\CarDetails.xaml.cs">
       <DependentUpon>CarDetails.XAML</DependentUpon>
@@ -81,6 +82,10 @@
     <Compile Include="UserControls\CarEquipment.xaml.cs">
       <DependentUpon>CarEquipment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PageNavigation.xaml.cs">
+      <DependentUpon>PageNavigation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ViewModelLocator\ViewModelLocator.cs" />
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
@@ -128,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\CarEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PageNavigation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
