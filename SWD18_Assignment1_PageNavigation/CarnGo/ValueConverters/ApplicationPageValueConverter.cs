@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
+using System.Windows.Markup;
 using CarnGo.Model;
 using CarnGo.View;
 
 namespace CarnGo.ValueConverters
 {
-    class ApplicationPageValueConverter : IValueConverter
+    public class ApplicationPageValueConverter : MarkupExtension, IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -29,6 +30,11 @@ namespace CarnGo.ValueConverters
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
+        }
+
+        public override object ProvideValue(IServiceProvider serviceProvider)
+        {
+            return new ApplicationPageValueConverter(); 
         }
     }
 }

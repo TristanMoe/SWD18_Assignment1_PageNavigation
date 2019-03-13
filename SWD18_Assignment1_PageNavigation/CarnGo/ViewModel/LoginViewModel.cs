@@ -55,8 +55,9 @@ namespace CarnGo.ViewModel
             if (user != null)
             {
                 //Set UserModel for ApplicationViewModel
+
                 //Set CurrentPage to StartPage
-                ViewModelLocator.ViewModelLocator.ApplicationViewModel.GoToPage(ViewModel.ApplicationPage.DummyPage); 
+                ViewModelLocator.ViewModelLocator.ApplicationViewModel.GoToPage(Model.ApplicationPage.DummyPage); 
             }
         }
         #endregion

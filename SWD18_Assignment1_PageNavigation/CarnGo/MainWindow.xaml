@@ -5,16 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarnGo"
         xmlns:CarnGo.View="clr-namespace:CarnGo.View"
+        xmlns:UserControl="clr-namespace:CarnGo.UserControls"
+        xmlns:ValueConvert="clr-namespace:CarnGo.ValueConverters"
+        xmlns:Locator="clr-namespace:CarnGo.ViewModelLocator"
+        xmlns:ViewModel="clr-namespace:CarnGo.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="400">
     
     <Window.Resources>
         <CarnGo.View:LoginView x:Key="LoginView"/>
     </Window.Resources>
-        
-        
+
+
     <Grid>
-        <Frame Content="{StaticResource LoginView}"></Frame>
+        <UserControl:PageNavigation CurrentPage="{Binding}"
+                                    DataContext="{Binding ApplicationViewModel.CurrentPage,Source={x:Static Locator:ViewModelLocator.Instance},
+                                    Converter={ValueConvert:ApplicationPageValueConverter}}"
+                                    />
     </Grid>
         
     

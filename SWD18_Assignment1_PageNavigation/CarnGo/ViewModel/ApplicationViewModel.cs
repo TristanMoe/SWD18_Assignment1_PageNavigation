@@ -9,7 +9,7 @@ namespace CarnGo.ViewModel
 {
     public class ApplicationViewModel : BaseViewModel
     {
-        private ApplicationPage _applicationPage;
+        private ApplicationPage _applicationPage = ApplicationPage.LoginPage;
         /// <summary>
         /// The current page of the application
         /// </summary>

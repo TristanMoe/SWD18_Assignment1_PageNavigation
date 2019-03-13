@@ -25,7 +25,7 @@ namespace CarnGo.UserControls
             InitializeComponent();
         }
 
-        public DependencyObject CurrentPage { get; set; }
+        public Page CurrentPage { get=>(Page)GetValue(CurrentPageProperty); set=>SetValue(CurrentPageProperty,value); }
 
         public static readonly DependencyProperty CurrentPageProperty =
             DependencyProperty.Register(nameof(CurrentPage), typeof(Page), typeof(PageNavigation), new PropertyMetadata());
