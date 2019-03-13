@@ -19,6 +19,8 @@ namespace CarnGo.ValueConverters
             {
                 case ApplicationPage.LoginPage:
                     return new LoginView();
+                case ApplicationPage.DummyPage:
+                    return new SendRequestView();
                 default:
                     throw new ArgumentException("The value to convert was not an ApplicationPage");
             }
