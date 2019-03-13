@@ -6,10 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 using System.Windows.Markup;
-using CarnGo.Model;
-using CarnGo.View;
-
-namespace CarnGo.ValueConverters
+namespace CarnGo
 {
     public class ApplicationPageValueConverter : MarkupExtension, IValueConverter
     {

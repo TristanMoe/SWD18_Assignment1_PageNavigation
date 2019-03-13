@@ -13,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CarnGo.View
+namespace CarnGo
 {
     /// <summary>
     /// Interaction logic for SendRequestView.xaml
     /// </summary>
-    public partial class SendRequestView : UserControl
+    public partial class SendRequestView : Page
     {
         public SendRequestView()
         {

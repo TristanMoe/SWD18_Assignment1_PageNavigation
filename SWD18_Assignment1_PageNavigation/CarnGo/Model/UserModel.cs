@@ -4,27 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarnGo.Model
+namespace CarnGo
 {
     public class UserModel
     {
         #region Constructors
         public UserModel()
         {
-            UserName = "";
-            Password = ""; 
         }
 
-        public UserModel(string username, string password)
-        {
-            UserName = username;
-            Password = password; 
-        }
 
-        public UserModel(string username, string password, string email, string firstname, string lastname)
+        public UserModel(string username, string email, string firstname, string lastname)
         {
             UserName = username;
-            Password = password;
             Email = email;
             Firstname = firstname;
             Lastname = lastname;
@@ -44,5 +36,10 @@ namespace CarnGo.Model
         public string Lastname { get => _lastname; set => _lastname = value; }
 
         #endregion
+
+        public override string ToString()
+        {
+            return $"{Firstname} {Lastname}";
+        }
     }
 }

@@ -1,11 +1,4 @@
-﻿using CarnGo.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarnGo.Database
+﻿namespace CarnGo
 {
     public interface IUserDatabase
     {
@@ -29,7 +22,7 @@ namespace CarnGo.Database
         /// <returns></returns>
         public UserModel GetUserModel(string usernameKey, string passwordKey)
         {
-            var user = new UserModel(usernameKey, passwordKey);
+            var user = new UserModel("jens","jens@jens.com","jens","jensen");
             return user; 
         }
     }

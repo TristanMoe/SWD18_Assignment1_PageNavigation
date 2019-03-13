@@ -1,4 +1,4 @@
-﻿namespace CarnGo.Model
+﻿namespace CarnGo
 {
     public enum ApplicationPage
     {

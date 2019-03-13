@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarnGo.ViewModelLocator
+﻿namespace CarnGo
 {
     public class ViewModelLocator
     {
@@ -21,11 +15,7 @@ namespace CarnGo.ViewModelLocator
         /// <summary>
         /// Singleton instance of ViewModelLocator
         /// </summary>
-        public static CarnGo.ViewModel.ApplicationViewModel ApplicationViewModel { get; set; } = new CarnGo.ViewModel.ApplicationViewModel(); 
+        public static ApplicationViewModel ApplicationViewModel { get; set; } = new ApplicationViewModel(); 
         #endregion
-
-
-
-
     }
 }

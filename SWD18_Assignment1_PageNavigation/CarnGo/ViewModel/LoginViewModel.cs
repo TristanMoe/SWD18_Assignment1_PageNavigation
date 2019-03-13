@@ -1,20 +1,11 @@
-﻿using CarnGo.Model;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using Prism.Commands;
-using CarnGo.Database;
-using CarnGo.ViewModelLocator;
+﻿using Prism.Commands;
 using System.Windows.Controls;
 
-namespace CarnGo.ViewModel
+namespace CarnGo
 {
     public class LoginViewModel : BaseViewModel
     {
+        private string _email;
         public LoginViewModel()
         {
             Database = new UserDatabaseStub(); 
@@ -36,7 +27,18 @@ namespace CarnGo.ViewModel
 
         #region Properties
         public IUserDatabase Database { get; private set; }
-        public string Email { get; private set; }
+
+        public string Email
+        {
+            get => _email;
+            private set
+            {
+                if (_email == value)
+                    return;
+                _email = value;
+                OnPropertyChanged(nameof(Email));
+            }
+        }
         #endregion
 
         #region Commands
@@ -51,13 +53,13 @@ namespace CarnGo.ViewModel
         private void LoginExecute(object obj)
         {
             var passwordBox = obj as PasswordBox;
-            var user = Database.GetUserModel(Email, passwordBox.Password);
+            var user = Database.GetUserModel(Email, passwordBox?.Password);
             if (user != null)
             {
                 //Set UserModel for ApplicationViewModel
-
+                ViewModelLocator.ApplicationViewModel.CurrentUser = user;
                 //Set CurrentPage to StartPage
-                ViewModelLocator.ViewModelLocator.ApplicationViewModel.GoToPage(Model.ApplicationPage.DummyPage); 
+                ViewModelLocator.ApplicationViewModel.GoToPage(ApplicationPage.DummyPage); 
             }
         }
         #endregion

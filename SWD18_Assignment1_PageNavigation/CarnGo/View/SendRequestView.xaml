@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="CarnGo.View.SendRequestView"
+﻿<Page x:Class="CarnGo.SendRequestView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:CarnGo.UserControls="clr-namespace:CarnGo.UserControls"
+             xmlns:carnGo="clr-namespace:CarnGo"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     
@@ -45,7 +45,7 @@
                 BorderBrush="{StaticResource BlueMainBrush}"
                 SnapsToDevicePixels="True"
                 >
-                <Image Source="C:\Users\Trill\OneDrive\Dokumenter\GitHub\CarnGoWPF\CarnGo\CarnGo\Images\Bilfoto.jpg" />
+                <Image Source="../Images/Bilfoto.jpg" />
             </Border>
 
                 <StackPanel Grid.Row="2" Margin="50,0,50,0">
@@ -59,7 +59,7 @@
                         <ItemsControl>
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <CarnGo.UserControls:CarDetails/>
+                                    <carnGo:CarDetails/>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
@@ -74,6 +74,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
@@ -127,9 +128,12 @@
                     HorizontalAlignment="Left"
                     Content="RENT CAR"
                     />
+                <TextBlock Grid.Row="3" Text="{Binding}"
+                           DataContext="{Binding ApplicationViewModel.CurrentUser,
+                                        Source={x:Static carnGo:ViewModelLocator.Instance}}"/>
 
             </Grid>    
     </Grid>
     </Border>
 
-</UserControl>
+</Page>

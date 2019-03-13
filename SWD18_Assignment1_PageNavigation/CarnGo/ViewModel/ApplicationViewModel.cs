@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CarnGo.Model;
-
-namespace CarnGo.ViewModel
+﻿namespace CarnGo
 {
     public class ApplicationViewModel : BaseViewModel
     {
         private ApplicationPage _applicationPage = ApplicationPage.LoginPage;
+        private UserModel _currentUser = null;
+
         /// <summary>
         /// The current page of the application
         /// </summary>
@@ -18,10 +13,25 @@ namespace CarnGo.ViewModel
             get => _applicationPage;
             private set
             {
-                if (CurrentPage == value)
+                if (_applicationPage == value)
                     return;
                 _applicationPage = value;
                 OnPropertyChanged(nameof(CurrentPage));
+            }
+        }
+
+        /// <summary>
+        /// The current user logged into the application
+        /// </summary>
+        public UserModel CurrentUser
+        {
+            get => _currentUser;
+            set
+            {
+                if (_currentUser == value)
+                    return;
+                _currentUser = value;
+                OnPropertyChanged(nameof(CurrentUser));
             }
         }
 
@@ -32,7 +42,6 @@ namespace CarnGo.ViewModel
         public void GoToPage(ApplicationPage page)
         {
             CurrentPage = page;
-
         }
     }
 }

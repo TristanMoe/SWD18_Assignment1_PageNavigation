@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CarnGo.UserControls
+namespace CarnGo
 {
     /// <summary>
     /// Interaction logic for PageNavigation.xaml
@@ -25,19 +25,21 @@ namespace CarnGo.UserControls
             InitializeComponent();
         }
 
-        public Page CurrentPage { get=>(Page)GetValue(CurrentPageProperty); set=>SetValue(CurrentPageProperty,value); }
-
-        public static readonly DependencyProperty CurrentPageProperty =
-            DependencyProperty.Register(nameof(CurrentPage), typeof(Page), typeof(PageNavigation), new PropertyMetadata());
-
-        private void OnCurrentPageChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        public Page CurrentPage
         {
-            UpdatePage(e);
+            get=>(Page)GetValue(CurrentPageProperty);
+            set =>SetValue(CurrentPageProperty,value);
         }
 
-        private void UpdatePage(DependencyPropertyChangedEventArgs e)
+        public static readonly DependencyProperty CurrentPageProperty =
+            DependencyProperty.Register(nameof(CurrentPage), typeof(Page), typeof(PageNavigation), new UIPropertyMetadata(OnCurrentPageChanged));
+
+        private static void OnCurrentPageChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            CurrentPageFrame.Content = e.NewValue;
+            var currentPageFrame = (d as PageNavigation)?.CurrentPageFrame;
+            if (currentPageFrame == null)
+                return;
+            currentPageFrame.Content = e.NewValue;
         }
 
     }
