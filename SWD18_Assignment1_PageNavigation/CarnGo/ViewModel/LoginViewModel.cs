@@ -14,29 +14,11 @@ namespace CarnGo.ViewModel
     {
         #region Constructors
         public LoginViewModel()
-        {
-            UserProfiles = new List<UserProfileModel>
-            {
-                new UserProfileModel("Mathias Hansen", "1234"),
-                new UserProfileModel("Tristan Møller", "1234"),
-                new UserProfileModel("Edward Brunton", "1234"),
-                new UserProfileModel("Marcus Gasberg", "1234"),
-                new UserProfileModel("Martin Gildberg", "1234")
-            };        
+        {     
         }    
         #endregion
 
         #region Properties
-        private List<UserProfileModel> _userProfiles; 
-        public List<UserProfileModel> UserProfiles
-        {
-            get { return _userProfiles; }
-            set
-            {
-                _userProfiles = value;
-                NotifyPropertyChanged(); 
-            }
-        }
         #endregion
 
         #region Commands
