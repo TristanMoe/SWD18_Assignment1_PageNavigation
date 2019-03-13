@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CarnGo.Model
 {
-    public class UserProfileModel
+    public class UserModel
     {
         #region Constructors
-        public UserProfileModel()
+        public UserModel()
         {
             UserName = "";
             Password = ""; 
         }
 
-        public UserProfileModel(string username, string password)
+        public UserModel(string username, string password)
         {
             UserName = username;
             Password = password; 

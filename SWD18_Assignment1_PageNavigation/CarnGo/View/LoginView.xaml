@@ -20,13 +20,21 @@
                        HorizontalAlignment="Center"
                        Foreground="{StaticResource ForegroundMainBrush}"/>
             <TextBox Tag="Email"
-                     FontSize="{StaticResource FontSizeLarge}"/>
+                     FontSize="{StaticResource FontSizeLarge}"
+                     Name="EmailBox"
+                     />
             <PasswordBox Tag="Password"
-                         FontSize="{StaticResource FontSizeLarge}"/>
+                         FontSize="{StaticResource FontSizeLarge}"
+                         Name="PasswordBox"
+                         />
             
             
             <Button Content="Login"
-                    FontSize="{StaticResource FontSizeLarge}"/>
+                    FontSize="{StaticResource FontSizeLarge}"
+                    Command="{Binding Path=LoginCommand, Mode=OneWay}"
+                    CommandParameter="{}"
+                    
+                    />
             
             
             <Button Style="{StaticResource TextButton}"

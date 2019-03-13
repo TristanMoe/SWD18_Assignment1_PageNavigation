@@ -73,7 +73,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\UserProfileModel.cs" />
+    <Compile Include="Database\IUserDatabase.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="UserControls\CarDetails.xaml.cs">
       <DependentUpon>CarDetails.XAML</DependentUpon>
     </Compile>

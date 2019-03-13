@@ -7,18 +7,25 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Prism.Commands;
+using CarnGo.Database;
 
 namespace CarnGo.ViewModel
 {
     public class LoginViewModel : BaseViewModel
     {
         #region Constructors
-        public LoginViewModel()
-        {     
+        /// <summary>
+        /// Dependency Injection
+        /// <see cref="IUserDatabase"/>
+        /// </summary>
+        public LoginViewModel(IUserDatabase database)
+        {
+            Database = database;
         }    
         #endregion
 
         #region Properties
+        public IUserDatabase Database { get; private set; }
         #endregion
 
         #region Commands
@@ -26,9 +33,13 @@ namespace CarnGo.ViewModel
         #endregion
 
         #region CanExecute & Execute
-        private void LoginExecute()
+        private void LoginExecute(string username, string password)
         {
-            //Set CurrentPage to StartPage
+            var user = Database.GetUserModel(username, password);
+            if (user != null)
+            {
+                //Set CurrentPage to StartPage
+            }
         }
         #endregion
 
