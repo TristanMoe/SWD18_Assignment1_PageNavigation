@@ -17,18 +17,17 @@
             >
 
         <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-
             <Label Grid.Row="0" 
                    Margin="0,15,0,0"
                    Content="Mercedes Benz CLA 250"
@@ -72,7 +71,7 @@
                                         
                 </StackPanel>
             </Grid>
-
+        
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -81,9 +80,15 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <Border Margin="0, 50, 50, 0"
-                    BorderBrush="{StaticResource BlueMainBrush}" 
-                    >
+            <Button Style="{StaticResource TextButton}"
+                    Content="Logout" 
+                    VerticalAlignment="Top" 
+                    HorizontalAlignment="Right"
+                    Command="{Binding LogoutCommand}"/>
+
+
+                <Border Margin="0, 50, 50, 0"
+                    BorderBrush="{StaticResource BlueMainBrush}" >
                 <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -93,28 +98,29 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
+                        </Grid.ColumnDefinitions>
+                
                 <Label HorizontalAlignment="Left"
-                       Grid.Row="0" Grid.Column="0"
+                       Grid.Row="1" Grid.Column="0"
                        Content="From"
                     />
 
                 <Label HorizontalAlignment="Left"
-                       Grid.Row="0" Grid.Column="1"
+                       Grid.Row="1" Grid.Column="1"
                        Content="To"
                        Margin="15,0,0,0"
                        />
 
 
                 <DatePicker HorizontalAlignment="Left" 
-                            Grid.Row="1" Grid.Column="0"
+                            Grid.Row="2" Grid.Column="0"
                             />
                 
                 <DatePicker HorizontalAlignment="Left" 
                             Margin="15, 0, 0, 0"
-                            Grid.Row="1" Grid.Column="1"
+                            Grid.Row="2" Grid.Column="1"
                             />
 
             </Grid>

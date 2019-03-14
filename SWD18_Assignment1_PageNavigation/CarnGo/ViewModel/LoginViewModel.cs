@@ -1,12 +1,13 @@
 ﻿using Prism.Commands;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace CarnGo
 {
     public class LoginViewModel : BaseViewModel
     {
         private string _email;
-        private DelegateCommand<object> _loginCommand;
+        private ICommand _loginCommand;
         #region Constructors
         public LoginViewModel()
         {
@@ -42,7 +43,7 @@ namespace CarnGo
         #endregion
 
         #region Commands
-        public DelegateCommand<object> LoginCommand
+        public ICommand LoginCommand
         {
             get => _loginCommand ?? new DelegateCommand<object>(LoginExecute);
             private set => _loginCommand = value;
