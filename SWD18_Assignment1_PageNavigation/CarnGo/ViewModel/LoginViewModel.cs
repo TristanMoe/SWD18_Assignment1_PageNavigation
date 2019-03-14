@@ -6,14 +6,14 @@ namespace CarnGo
     public class LoginViewModel : BaseViewModel
     {
         private string _email;
+        private DelegateCommand<object> _loginCommand;
+        #region Constructors
         public LoginViewModel()
         {
-            Database = new UserDatabaseStub(); 
+            Database = new UserDatabaseStub();
             Email = "";
         }
 
-        private DelegateCommand<object> _loginCommand;
-        #region Constructors
         /// <summary>
         /// Dependency Injection
         /// <see cref="IUserDatabase"/>
@@ -52,8 +52,7 @@ namespace CarnGo
         #region CanExecute & Execute
         private void LoginExecute(object obj)
         {
-            var passwordBox = obj as PasswordBox;
-            var user = Database.GetUserModel(Email, passwordBox?.Password);
+            var user = Database.GetUserModel(Email, (obj as PasswordBox)?.Password);
             if (user != null)
             {
                 //Set UserModel for ApplicationViewModel

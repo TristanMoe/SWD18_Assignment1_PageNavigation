@@ -49,10 +49,15 @@
             </Border>
 
                 <StackPanel Grid.Row="2" Margin="50,0,50,0">
-                    <Label  Content="Details"
-                            HorizontalAlignment="Left"                        
-                        />
-
+                    <TextBlock  Text="Details"
+                                FontFamily="{StaticResource RobotoBold}"
+                                HorizontalAlignment="Left"/>
+                    <TextBlock>
+                        <TextBlock Text="Owner: "/>
+                        <TextBlock Grid.Row="3" Text="{Binding}"
+                                   DataContext="{Binding ApplicationViewModel.CurrentUser,
+                                        Source={x:Static carnGo:ViewModelLocator.Instance}}"/>
+                    </TextBlock>
                     <ScrollViewer VerticalScrollBarVisibility="Hidden"
                                   >
                         <!-- Insert CarDetails -->
@@ -128,9 +133,6 @@
                     HorizontalAlignment="Left"
                     Content="RENT CAR"
                     />
-                <TextBlock Grid.Row="3" Text="{Binding}"
-                           DataContext="{Binding ApplicationViewModel.CurrentUser,
-                                        Source={x:Static carnGo:ViewModelLocator.Instance}}"/>
 
             </Grid>    
     </Grid>
