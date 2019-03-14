@@ -1,4 +1,4 @@
-﻿<Page x:Class="CarnGo.SendRequestView"
+﻿<carnGo:BasePage x:TypeArguments="carnGo:SendRequestViewModel" x:Class="CarnGo.SendRequestView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -54,9 +54,7 @@
                                 HorizontalAlignment="Left"/>
                     <TextBlock>
                         <TextBlock Text="Owner: "/>
-                        <TextBlock Grid.Row="3" Text="{Binding}"
-                                   DataContext="{Binding ApplicationViewModel.CurrentUser,
-                                        Source={x:Static carnGo:ViewModelLocator.Instance}}"/>
+                        <TextBlock Grid.Row="3" Text="{Binding User}"/>
                     </TextBlock>
                     <ScrollViewer VerticalScrollBarVisibility="Hidden"
                                   >
@@ -138,4 +136,4 @@
     </Grid>
     </Border>
 
-</Page>
+</carnGo:BasePage>
