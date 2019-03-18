@@ -91,13 +91,13 @@
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
-    <Compile Include="ViewModel\SendRequestViewModel.cs" />
+    <Compile Include="ViewModel\DummyViewModel.cs" />
     <Compile Include="View\BasePage.cs" />
     <Compile Include="View\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SendRequestView.xaml.cs">
-      <DependentUpon>SendRequestView.xaml</DependentUpon>
+    <Compile Include="View\DummyPageView.xaml.cs">
+      <DependentUpon>DummyPageView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -147,7 +147,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\SendRequestView.xaml">
+    <Page Include="View\DummyPageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
